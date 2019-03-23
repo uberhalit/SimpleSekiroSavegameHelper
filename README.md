@@ -2,7 +2,7 @@
 
 A small utility for save game management for [Sekiro: Shadows Die Twice](https://www.sekirothegame.com/) written in C#.
 
-[![Simple Sekiro Savegame Helper](data/screen01.png)](#)
+![Simple Sekiro Savegame Helper](https://camo.githubusercontent.com/474b6cc9d806151b8cedd37961bc7533014c808c/68747470733a2f2f692e696d6775722e636f6d2f306d52714b43382e706e67)
 
 ## Features
 
