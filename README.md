@@ -4,6 +4,10 @@ A small utility for save game management for [Sekiro: Shadows Die Twice](https:/
 
 ![Simple Sekiro Savegame Helper](https://camo.githubusercontent.com/474b6cc9d806151b8cedd37961bc7533014c808c/68747470733a2f2f692e696d6775722e636f6d2f306d52714b43382e706e67)
 
+## Download
+
+[Get the latest release here](https://github.com/uberhalit/SimpleSekiroSavegameHelper/releases)
+
 ## Features
 
 * automatically determines latest savegame on startup
