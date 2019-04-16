@@ -11,16 +11,17 @@ A small utility for save game management for [Sekiro: Shadows Die Twice](https:/
 ## Features
 
 * automatically determines latest savegame on startup
-* (Lock savegame) prevents game from writing to current savegame so death counter and alike won't be updated
-* (Unlock savegame) remove write lock from savegame so game can save current progress
 * (Backup savegame) backup current savegame
+* (Set name for selected backup) saet a custom name for a backup
 * (Revert to selected backup) deletes current savegame and places selected backup as new one
-* manually select another savegame to lock/backup
+* (Delete selected backup) deletes selected backup form disk
+* optionally hotkey shortcuts for all features
+* manually select another savegame path to lock/backup
 
 ## Prerequisites
 
-* .NET Framework 4.0
-* administrative privileges (for locking/unlocking)
+* .NET Framework 4.5
+* administrative privileges (to overwrite files and set hotkeys)
 
 ## Usage
 
@@ -28,7 +29,7 @@ Start the utility, select your savegame and backup if the latest ones don't fit 
 
 ## Building
 
-Use Visual Studio 2017 to build
+Use Visual Studio 2017 or newer to build
 
 ## Contributing
 
@@ -38,11 +39,15 @@ Feel free to open an issue or create a pull request at any time
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
-## Known problems
+## Credits
 
-* the game writes some bytes to the savegame when in main menu, this won't work if you locked the file, unlock it first, then load, then lock again
+* [Darius Dan](http://www.dariusdan.com) for the icon
 
 ## Version History
 
-* v1.0.0 (2019-03-23)
+* v1.1.0.0 (2019-04-16)
+  * Added feature give a name to backups
+  * Added feature to delete backups
+  * Removed lock/unlock feature as they could crash the game
+* v1.0.0.0 (2019-03-23)
   * Initial release
