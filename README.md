@@ -46,8 +46,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Version History
 
 * v1.1.0.0 (2019-04-16)
-  * Added feature give a name to backups
+  * Added feature to give a name to backups
   * Added feature to delete backups
+  * Hotkeys are toggeable now
   * Removed lock/unlock feature as they could crash the game
 * v1.0.0.0 (2019-03-23)
   * Initial release
