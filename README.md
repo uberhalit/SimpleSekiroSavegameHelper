@@ -1,6 +1,6 @@
 # Simple Sekiro Savegame Helper
 
-A small utility for save game management for [Sekiro: Shadows Die Twice](https://www.sekirothegame.com/) written in C#.
+A small utility for save game management for [Sekiro: Shadows Die Twice](https://www.sekirothegame.com/) written in C#. Can import save files from other users, backup, restore, set names to backups, delete and additionally patch the game's memory so it will skip all checks on save games therefore it enables you to modify your save files. Also available on [Nexus Mods](https://www.nexusmods.com/sekiro/mods/274/).
 
 ![Simple Sekiro Savegame Helper](https://camo.githubusercontent.com/2a2f906c62493531511a636a75b4305564beb04a/68747470733a2f2f692e696d6775722e636f6d2f573663345841742e706e67)
 
@@ -11,7 +11,7 @@ A small utility for save game management for [Sekiro: Shadows Die Twice](https:/
 ## Features
 
 * automatically determines latest savegame on startup
-* Patch game to skip checksum and SteamID checks on load, this will enable you to load modified save games
+* Patch game to skip checksum and SteamID checks on load, this will enable you to load modified save games **(RAM patches only)**
 * (Import foreign savegame) imports a save game from a different steam account into yours, your game settings can be preserved if a destination is given
 * (Backup savegame) backup current savegame
 * (Set name for selected backup) set a custom name for a backup
@@ -22,7 +22,7 @@ A small utility for save game management for [Sekiro: Shadows Die Twice](https:/
 
 ## Usage
 
-Start the utility, select your savegame and back it up if the latest one doesn't fit already, start Sekiro, load up savegame ingame.
+Start the utility, select your savegame and back it up if the latest backup doesn't fit already, start Sekiro, load up savegame ingame. The patch affects the games memory, no game files will be modified. As the patcher hot-patches the RAM **you have to enable the patch every time you want to skip save file checks to import modified files.** This is not neccessary if you properly import a save file using the Import function.
 
 ### On 'Patch game to load unimported foreign/modified save files':
 
