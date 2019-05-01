@@ -2,7 +2,7 @@
 
 A small utility for save game management for [Sekiro: Shadows Die Twice](https://www.sekirothegame.com/) written in C#.
 
-![Simple Sekiro Savegame Helper](https://camo.githubusercontent.com/498889bf84c4ea5d0c58f93355b40c82f45304c8/68747470733a2f2f692e696d6775722e636f6d2f33417752777a472e706e67)
+![Simple Sekiro Savegame Helper](https://camo.githubusercontent.com/2a2f906c62493531511a636a75b4305564beb04a/68747470733a2f2f692e696d6775722e636f6d2f573663345841742e706e67)
 
 ## Download
 
@@ -11,21 +11,31 @@ A small utility for save game management for [Sekiro: Shadows Die Twice](https:/
 ## Features
 
 * automatically determines latest savegame on startup
+* Patch game to skip checksum and SteamID checks on load, this will enable you to load modified save games
+* (Import foreign savegame) imports a save game from a different steam account into yours, your game settings can be preserved if a destination is given
 * (Backup savegame) backup current savegame
-* (Set name for selected backup) saet a custom name for a backup
+* (Set name for selected backup) set a custom name for a backup
 * (Revert to selected backup) deletes current savegame and places selected backup as new one
 * (Delete selected backup) deletes selected backup form disk
 * optionally hotkey shortcuts for all features
 * manually select another savegame path to lock/backup
 
+## Usage
+
+Start the utility, select your savegame and back it up if the latest one doesn't fit already, start Sekiro, load up savegame ingame.
+
+### On 'Patch game to load unimported foreign/modified save files':
+
+The game runs several checksum checks and compares Steam Ids before loading a save file. Enabling this option will patch the game to skip all checks which allows you to not only load save files from other users but also to modify your own file without worrying about checksums. Be aware however that the game does not have a settings file outside of graphical settings so loading a foreign save file will also load all game settings from that file. Consider using the Import function if you want to preserve your own game settings.
+
+### On 'Import foreign savegame':
+
+This function takes a source file and optionally a destination file. The save slots from the source file will be copied over to the destination file while the game settings of the destination will be preserved. Omitting the destination file will directly modify the source file to make it importable to your game. Backups will be created automatically. Be aware however that the game does not have a settings file outside of graphical settings so when you omit the destination file the newly imported save file will contain all game settings from the provider of the file.
+
 ## Prerequisites
 
 * .NET Framework 4.5
-* administrative privileges (to overwrite files and set hotkeys)
-
-## Usage
-
-Start the utility, select your savegame and backup if the latest ones don't fit already, start Sekiro, load up savegame ingame.
+* administrative privileges (for patching and to overwrite files)
 
 ## Building
 
@@ -41,14 +51,20 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Credits
 
+* [klm123](https://gaming.stackexchange.com/users/49789/klm123) for some save file offsets
 * [Darius Dan](http://www.dariusdan.com) for the icon
 
 ## Version History
 
+* v2.0.0.0 (2019-05-01)
+  * Added feature to patch game so it will accept any save file
+  * Added save file importer
+  * Checkbox states will be saved now
+  * Small fixes
 * v1.1.0.0 (2019-04-16)
   * Added feature to give a name to backups
   * Added feature to delete backups
-  * Hotkeys are toggeable now
+  * Hotkeys are toggleable now
   * Removed lock/unlock feature as they could crash the game
 * v1.0.0.0 (2019-03-23)
   * Initial release

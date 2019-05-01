@@ -14,6 +14,12 @@ namespace SimpleSekiroSavegameHelper
          * Settings definition
          */
         [DataMember]
+        public bool gameVersionNotify { get; set; }
+        [DataMember]
+        public bool cbPatchGame { get; set; }
+        [DataMember]
+        public bool cbHotkeys { get; set; }
+        [DataMember]
         public Dictionary<string, string> names { get; set; }
 
         public ApplicationSettings()
